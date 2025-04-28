@@ -1,4 +1,5 @@
 import 'package:doctor/screens/login_screen.dart';
+import 'package:doctor/widgets/navbar_roots.dart';
 import 'package:doctor/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -18,9 +19,9 @@ class WelcomeScreen extends StatelessWidget {
             Align(alignment: Alignment.centerRight,
             child: TextButton(
               onPressed: (){
-                //Navigator.push(context, MaterialPageRoute(
-                  //builder: (context)=>
-                  //));
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context)=> NavbarRoots(),
+                  ));
               },
               child: Text(
                 "SKIP",
@@ -31,9 +32,9 @@ class WelcomeScreen extends StatelessWidget {
               ),
             ),
             ),
-            SizedBox(height: 1),
+            SizedBox(height: 50),
             Padding(
-              padding: EdgeInsets.all(1),
+              padding: EdgeInsets.all(20),
               child: Image.asset("images/doctores.png"),
             ),
             SizedBox(height: 50),

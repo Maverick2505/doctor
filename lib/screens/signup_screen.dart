@@ -1,3 +1,5 @@
+import 'package:doctor/screens/login_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SignupScreen extends StatefulWidget {
@@ -65,11 +67,76 @@ class _SignupScreenState extends State<SignupScreen> {
                     } else {
                       passToggle= true;
                     }
-                    setState(() {}); //min 19:36 (cosas por corregir)
-                  }),
+                    setState(() {}); 
+                  },
+                  child: passToggle 
+                      ? Icon(CupertinoIcons.eye_slash_fill) 
+                      : Icon(CupertinoIcons.eye_fill),
+                ),
                 ),
               ),
             ),
+            SizedBox(height: 10),
+            Padding(
+                padding: const EdgeInsets.all(10),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: Material(
+                    
+                      color: Color(0xFF7165D6),
+                      borderRadius: BorderRadius.circular(10),
+                      child: InkWell(
+                      onTap: (){
+                         //Navigator.push(context, MaterialPageRoute(
+                          //builder: (context)=> LoginScreen()
+                         //));
+                      },
+                      child: Padding(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 10, horizontal: 40),
+                        child: Center(
+                          child: Text(
+                            "Create Account",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            ),
+                        ),
+                        ),
+                      ),
+                    ),
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                  "Already have account?",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.black54,
+                  ),
+                  ),
+                  TextButton(
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(
+                          builder: (context)=> LoginScreen(),
+                         ));
+                    }, 
+                    child: Text(
+                      "Log in",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF7165D6),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
           ],
         ),
       ),
