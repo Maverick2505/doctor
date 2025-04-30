@@ -1,4 +1,5 @@
 import 'package:doctor/screens/home_screen.dart';
+import 'package:doctor/screens/settings_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class _NavbarRootsState extends State<NavbarRoots> {
     // Schedule Screen
     Container(),
     //Settings Screen
-    Container(),
+    SettingsScreen(),
   ];
 
   @override
@@ -65,4 +66,4 @@ class _NavbarRootsState extends State<NavbarRoots> {
       ),
     );
   }
-}//42:11 min
+}
