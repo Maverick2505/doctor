@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Hello Alex",
+                  "Hello Maverick",
                   style: TextStyle(
                     fontSize: 35,
                     fontWeight: FontWeight.w500,
@@ -40,7 +40,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 CircleAvatar(
                   radius: 25,
-                  backgroundImage: AssetImage("images/doctor1.png"),
+                  backgroundImage: AssetImage("images/doctor3.png"),
                 )
               ],
             ),
